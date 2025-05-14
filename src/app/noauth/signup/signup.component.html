@@ -1,0 +1,70 @@
+<mat-card class="signup-container" *ngIf="step == 1"> 
+        <div class="login-url"> 
+       <u style="color: blueviolet;" (click)="login()">Login Now</u>
+    </div>
+  <h1 class="heading-signup">Register With New Users</h1>
+  <form (ngSubmit)="signup()">
+    <div class="signup-div">
+      <mat-form-field appearance="fill">
+        <mat-label>Full Name</mat-label>
+        <input
+          matInput
+          type="text"
+          [(ngModel)]="name"
+          name="name"
+          required
+          placeholder="Please Enter your Name"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          type="email"
+          [(ngModel)]="email"
+          name="email"
+          required
+          placeholder="Please Enter your Email"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Contact Number</mat-label>
+        <input
+          matInput
+          type="phone"
+          [(ngModel)]="contactNumber"
+          name="contactNumber"
+          required
+          placeholder="Please Enter your Contact Number"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          type="password"
+          [(ngModel)]="password"
+          name="password"
+          required
+          placeholder="Please Enter your Password"
+        />
+      </mat-form-field>
+    </div>
+    <div class="login-button">
+      <button type="submit" mat-raised-button color="primary">Sign Up</button>
+    </div>
+  </form> 
+    <!-- <div class="login-url"> 
+       <u style="color: blueviolet;" (click)="login()">Login Now</u>
+    </div> -->
+</mat-card>
+<mat-card class="signup-container" *ngIf="step == 2"> 
+  <h1 style="color: green; text-align: center;">🎉 Successfully Registered!</h1>
+  <p style="font-size: 18px; text-align: center; margin-top: 10px;">
+    Please log in with your credentials.
+  </p>
+  <div style="text-align: center; margin-top: 20px;">
+    <button mat-raised-button color="primary" (click)="login()">Go to Login</button>
+  </div>
+</mat-card>
+

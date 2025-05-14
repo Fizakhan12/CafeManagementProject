@@ -1,0 +1,25 @@
+.signup-container{
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+} 
+.heading-signup{ 
+    color: black; 
+    font-weight: 200; 
+    margin-top: 10px;  
+    display: flex; 
+    justify-content: center;
+} 
+.signup-div{ 
+    display: flex;  
+    justify-content: center;
+flex-direction: column;
+}   
+.login-url{
+        display: flex; 
+    justify-content: right;
+}
+.login-button{
+     display: flex; 
+    justify-content: center;
+}
